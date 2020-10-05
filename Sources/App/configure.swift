@@ -37,4 +37,8 @@ public func configure(_ app: Application) throws {
 
     // register routes
     try routes(app)
+    
+    if app.environment == .development {
+        try app.autoMigrate().wait()
+    }
 }
