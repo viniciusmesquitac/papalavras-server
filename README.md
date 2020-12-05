@@ -46,3 +46,10 @@
   "character":"B"
  }
 ```
+
+## Quer contribuir?
+
+Caso queira contribuir basta abrir uma issue informando a melhoria ou abrir um pr :D
+
+Dê ⭐️ neste repositório para que mais pessoas possam ver o/
+
