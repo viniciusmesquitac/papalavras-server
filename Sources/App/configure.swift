@@ -5,7 +5,7 @@ import Vapor
 extension Environment {
     
     static var databaseURL: URL? {
-        if let urlString = Environment.get("DATABASE_URL"), let url = URL(string: urlString) {
+        if let urlString = Environment.get("DATABASE_URL"), let url = URL(string: urlString + "?sslmode=require") {
             return url
         }
         return nil
