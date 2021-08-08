@@ -19,7 +19,9 @@ public func configure(_ app: Application) throws {
     // app.middleware.use(FileMiddleware(publicDirectory: app.directory.publicDirectory))
 
     if let databaseUrl = Environment.databaseURL {
-        try app.databases.use(.postgres(url: databaseUrl), as: .psql)
+        var config = PostgresConfiguration(url: databaseUrl)!
+        config.tlsConfiguration = .none
+        app.databases.use(.postgres(configuration: config), as: .psql)
     } else {
         app.databases.use(.postgres(
             hostname: Environment.get("DATABASE_HOST") ?? "localhost",
