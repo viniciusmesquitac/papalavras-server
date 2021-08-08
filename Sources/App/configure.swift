@@ -25,7 +25,8 @@ public func configure(_ app: Application) throws {
             hostname: Environment.get("DATABASE_HOST") ?? "localhost",
             username: Environment.get("DATABASE_USERNAME") ?? "vinicius",
             password: Environment.get("DATABASE_PASSWORD") ?? "",
-            database: Environment.get("DATABASE_NAME") ?? "papalavrasdb"
+            database: Environment.get("DATABASE_NAME") ?? "papalavrasdb",
+            tlsConfiguration: .forClient(certificateVerification: .none)
         ), as: .psql)
     }
 
