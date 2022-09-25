@@ -1,5 +1,5 @@
 //
-//  WordsController.swift
+//  DictionaryController.swift
 //
 //
 //  Created by Vinicius Mesquita on 30/09/20.
